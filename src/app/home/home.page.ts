@@ -11,6 +11,7 @@ export class HomePage {
   async testPluginMethod(msg: any) {
     await printPlugin.testPluginMethod({ msg: msg }).then((res: any) => {
       alert('return value is ' + JSON.stringify(res.value));
+      console.log(res)
     }).catch((err:any)=>{
       alert('err value is ' + JSON.stringify(err.value));
     });

@@ -1,5 +1,5 @@
 package io.ionic.starter;
-
+import com.printchris.printPlugin.*;
 import android.os.Bundle;
 
 import com.getcapacitor.BridgeActivity;

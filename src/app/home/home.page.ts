@@ -8,12 +8,41 @@ import { printPlugin } from 'print-plugin';
 export class HomePage {
   constructor() {}
 
-  async testPluginMethod(msg: any) {
-    await printPlugin.testPluginMethod({ msg: msg }).then((res: any) => {
-      alert('return value is ' + JSON.stringify(res.value));
+  ngOnInit(){
+      
+  }
+
+  test(){
+    this.enableServices();
+    this.addCallBack();
+    this.enumBle();
+  }
+   testPluginMethod(msg: any) { 
+     printPlugin.testPluginMethod({ msg: msg }).then((res: any) => {
       console.log(res)
     }).catch((err:any)=>{
-      alert('err value is ' + JSON.stringify(err.value));
+     console.log(err)
     });
   }
+  enableServices() {
+     printPlugin.enableServices().then((res: any) => {
+      console.log(JSON.stringify(res))
+    }).catch((err:any)=>{
+      console.log(err)
+    });
+  }
+  addCallBack() {
+    printPlugin.PrintAddCallBack().then((res: any) => {
+     console.log(JSON.stringify(res))
+   }).catch((err:any)=>{
+    console.log(err)
+   });
+ }
+ enumBle() {
+  printPlugin.EnumBle().then((res: any) => {
+   console.log(JSON.stringify(res))
+ }).catch((err:any)=>{
+   console.log(err)
+ });
+}
 }

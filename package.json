@@ -29,6 +29,7 @@
     "@capacitor/status-bar": "6.0.0",
     "@ionic/angular": "^8.0.0",
     "ionicons": "^7.0.0",
+    "p-print-plugin": "file:../p-print-plugin",
     "print-plugin": "file:../print-plugin",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

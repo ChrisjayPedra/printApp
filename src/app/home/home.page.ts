@@ -13,9 +13,8 @@ export class HomePage {
     this.enableServices();
   }
 
-  test() {
+  Callback() {
     this.AddCallback();
-    this.TestFunction();
   }
   Enum() {
     this.EnumBle();
@@ -25,8 +24,17 @@ export class HomePage {
     this.EnumUsb();
     this.EnumWiFiP2P();
   }
-  testPluginMethod(msg: any) {
-    printPlugin
+  openPort() {
+    this.openport();
+  }
+  SampleTicket_58MM() {
+    this.Test_Pos_SampleTicket_58MM_2();
+  }
+  SampleTicket_80MM() {
+    this.Test_Pos_SampleTicket_80MM_1();
+  }
+  async testPluginMethod(msg: any) {
+    await printPlugin
       .testPluginMethod({ msg: msg })
       .then((res: any) => {
         console.log(res);
@@ -35,8 +43,8 @@ export class HomePage {
         console.log(err);
       });
   }
-  enableServices() {
-    printPlugin
+  async enableServices() {
+    await printPlugin
       .enableServices()
       .then((res: any) => {
         console.log(JSON.stringify(res));
@@ -45,19 +53,9 @@ export class HomePage {
         console.log(err);
       });
   }
-  AddCallback() {
-    printPlugin
-      .AddCallback()
-      .then((res: any) => {
-        console.log(JSON.stringify(res));
-      })
-      .catch((err: any) => {
-        console.log(err);
-      });
-  }
-  async TestFunction() {
+  async AddCallback() {
     await printPlugin
-      .TestFunction()
+      .AddCallback()
       .then((res: any) => {
         console.log(JSON.stringify(res));
       })
@@ -118,6 +116,42 @@ export class HomePage {
   async EnumWiFiP2P() {
     await printPlugin
       .EnumWiFiP2P()
+      .then((res: any) => {
+        console.log(JSON.stringify(res));
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+  }
+  async openport() {
+    let sample = {
+      type: 'BT4',
+      nBaudTable: 115200,
+      flowControlIndex: 1,
+    };
+    const options = { content: sample };
+    await printPlugin
+      .OpenPort(options)
+      .then((res: any) => {
+        console.log(JSON.stringify(res));
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+  }
+  async Test_Pos_SampleTicket_80MM_1() {
+    await printPlugin
+      .Test_Pos_SampleTicket_80MM_1()
+      .then((res: any) => {
+        console.log(JSON.stringify(res));
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+  }
+  async Test_Pos_SampleTicket_58MM_2() {
+    await printPlugin
+      .Test_Pos_SampleTicket_58MM_2()
       .then((res: any) => {
         console.log(JSON.stringify(res));
       })

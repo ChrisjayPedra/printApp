@@ -27,6 +27,9 @@ export class HomePage {
   openPort() {
     this.openport();
   }
+  closePort() {
+    this.ClosePort();
+  }
   SampleTicket_58MM() {
     this.Test_Pos_SampleTicket_58MM_2();
   }
@@ -56,6 +59,16 @@ export class HomePage {
   async AddCallback() {
     await printPlugin
       .AddCallback()
+      .then((res: any) => {
+        console.log(JSON.stringify(res));
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+  }
+  async RemoveCallback() {
+    await printPlugin
+      .RemoveCallback()
       .then((res: any) => {
         console.log(JSON.stringify(res));
       })
@@ -116,6 +129,16 @@ export class HomePage {
   async EnumWiFiP2P() {
     await printPlugin
       .EnumWiFiP2P()
+      .then((res: any) => {
+        console.log(JSON.stringify(res));
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+  }
+  async ClosePort() {
+    await printPlugin
+      .ClosePort()
       .then((res: any) => {
         console.log(JSON.stringify(res));
       })

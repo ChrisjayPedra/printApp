@@ -19,3 +19,6 @@ project(':p-print-plugin').projectDir = new File('../../p-print-plugin/android')
 
 include ':print-plugin'
 project(':print-plugin').projectDir = new File('../../print-plugin/android')
+
+include ':suncashradius'
+project(':suncashradius').projectDir = new File('../../suncashradius/android')

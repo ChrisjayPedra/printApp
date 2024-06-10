@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { printPlugin } from 'print-plugin';
 import { pprintplugin } from 'p-print-plugin';
+// import { suncashradius } from 'suncashradius';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -30,11 +31,20 @@ export class HomePage {
   closePort() {
     this.ClosePort();
   }
-  SampleTicket_58MM() {
+  SampleTicket_58MM2() {
     this.Test_Pos_SampleTicket_58MM_2();
   }
-  SampleTicket_80MM() {
+  SampleTicket_58MM1() {
+    this.Test_Pos_SampleTicket_58MM_1();
+  }
+  SampleTicket_80MM1() {
     this.Test_Pos_SampleTicket_80MM_1();
+  }
+  test_Port_Read() {
+    this.Test_Port_Read();
+  }
+  test_Pos_PrintSelfTestPage() {
+    this.Test_Pos_PrintSelfTestPage();
   }
   async testPluginMethod(msg: any) {
     await printPlugin
@@ -182,4 +192,44 @@ export class HomePage {
         console.log(err);
       });
   }
+  async Test_Port_Read() {
+    await printPlugin
+      .Test_Port_Read()
+      .then((res: any) => {
+        console.log(JSON.stringify(res));
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+  }
+  async Test_Pos_PrintSelfTestPage() {
+    await printPlugin
+      .Test_Pos_PrintSelfTestPage()
+      .then((res: any) => {
+        console.log(JSON.stringify(res));
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+  }
+  async Test_Pos_SampleTicket_58MM_1() {
+    await printPlugin
+      .Test_Pos_SampleTicket_58MM_1()
+      .then((res: any) => {
+        console.log(JSON.stringify(res));
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+  }
+  // async suncashradius(){
+  //   await suncashradius
+  //   .pluginPermissionMethod()
+  //   .then((res:any)=>{
+  //     console.log(JSON.stringify(res));
+  //   })
+  //   .catch((err:any)=>{
+  //     console.log(err);
+  //   })
+  // }
 }

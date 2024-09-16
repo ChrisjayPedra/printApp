@@ -34,10 +34,10 @@
     "print-plugin": "file:../print-plugin",
     "print-plugin-ionic-cjp": "file:../print-plugin",
     "rxjs": "~7.8.0",
-    "scan-plugin-ionic-cjp": "^0.0.33",
+    "scan-plugin-ionic-cjp": "^0.0.56",
     "suncashradius": "file:../suncashradius",
     "tslib": "^2.3.0",
-    "xentra-plugins": "^1.0.18",
+    "xentra-plugins": "^1.0.27",
     "zone.js": "~0.14.2"
   },
   "devDependencies": {

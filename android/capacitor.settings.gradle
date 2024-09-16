@@ -17,12 +17,6 @@ project(':capacitor-status-bar').projectDir = new File('../node_modules/@capacit
 include ':p-print-plugin'
 project(':p-print-plugin').projectDir = new File('../../p-print-plugin/android')
 
-include ':print-plugin'
-project(':print-plugin').projectDir = new File('../../print-plugin/android')
-
-include ':print-plugin-ionic-cjp'
-project(':print-plugin-ionic-cjp').projectDir = new File('../../print-plugin/android')
-
 include ':scan-plugin-ionic-cjp'
 project(':scan-plugin-ionic-cjp').projectDir = new File('../node_modules/scan-plugin-ionic-cjp/android')
 

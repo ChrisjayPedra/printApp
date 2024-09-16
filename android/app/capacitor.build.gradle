@@ -14,8 +14,6 @@ dependencies {
     implementation project(':capacitor-keyboard')
     implementation project(':capacitor-status-bar')
     implementation project(':p-print-plugin')
-    implementation project(':print-plugin')
-    implementation project(':print-plugin-ionic-cjp')
     implementation project(':scan-plugin-ionic-cjp')
     implementation project(':suncashradius')
 
